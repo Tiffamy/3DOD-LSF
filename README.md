@@ -1,21 +1,22 @@
 # Improving Generalization Ability for 3D Object Detection by Learning Sparsity-invariant Features 
-
+The following figure is the overall structure of our method.
+![image](./figures/structure.png)
 
 ## Introduction
-
+In this paper, we propose a training method to improve the generalization ability for 3D object detection on a single domain. Our method empowers the 3D detector to learn sparsity-invariant features through training with our proposed augmentation and feature alignment techniques.
+![image](./figures/fig1.png)
 
 ## Model Zoo
 
-### General models
-
+<!-- ### General models
 
 General models trained on Waymo dataset. The training Waymo data used in our work is version 1.0.
 
 ### Single-dataset Generalization
 
+Results of single-dataset generalization on KITTI dataset with SECOND-IoU (moderate difficulty). -->
 
-
-Results of single-dataset generalization on KITTI dataset with SECOND-IoU (moderate difficulty).
+You can download all the pretrained models in the following [link](https://drive.google.com/file/d/1dE-uBtGcD8EpoYxd1vOCFe6WC1GaIm3x/view?usp=drive_link).
 
 
 ## Installation
