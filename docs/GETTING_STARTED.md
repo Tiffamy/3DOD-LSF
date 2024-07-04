@@ -13,12 +13,6 @@ OpenPCDet
 │   │   │── ImageSets
 │   │   │── training
 │   │   │   ├──calib & velodyne & label_2 & image_2 & (optional: planes)
-|   |   |   ├──modes
-|   |   |      ├──64
-|   |   |      ├──32
-|   |   |      ├──32^
-|   |   |      ├──16
-|   |   |      ├──16^
 │   │   │── testing
 │   │   │   ├──calib & velodyne & image_2
 ├── pcdet
@@ -71,12 +65,6 @@ OpenPCDet
 │   │   │── raw_data
 │   │   │   │── segment-xxxxxxxx.tfrecord
 |   |   |   |── ...
-|   |   |── modes
-│   │   │   │── 64
-│   │   │       │── segment-xxxxxxxx/
-|   |   |       |── ...
-│   │   │   │── 32
-│   │   │   │── 16^
 │   │   │── pcdet_gt_database_train_sampled_xx/
 │   │   │── pcdet_waymo_dbinfos_train_sampled_xx.pkl   
 ├── pcdet
@@ -89,8 +77,7 @@ pip3 install --upgrade pip
 pip3 install waymo-open-dataset-tf-2-0-0==1.2.0 --user
 ```
 
-* Extract point cloud data with different beams from tfrecord and generate data infos by running the following command (it takes several hours, 
-and you could refer to `data/waymo/modes/64` to see how many records that have been processed): 
+* Extract point cloud data with different beams from tfrecord and generate data infos by running the following command: 
 ```python 
 python -m pcdet.datasets.waymo.waymo_dataset --func create_waymo_infos \
     --cfg_file tools/cfgs/dataset_configs/waymo_dataset.yaml
